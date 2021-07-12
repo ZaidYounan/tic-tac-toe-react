@@ -4,18 +4,13 @@ import './index.css';
 import App from './App';
 
 
-class Square extends React.Component {
-  render() {
+function Square(props) {
     return (
-      <button 
-      className="square" 
-      onClick={() => this.props.onClick()}
-      >
-        {this.props.value}
+      <button className="square" onClick={props.onClick}>
+        {props.value}
       </button>
     );
   }
-}
 
 class Board extends React.Component {
   constructor(props) {
